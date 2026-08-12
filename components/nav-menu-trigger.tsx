@@ -23,7 +23,7 @@ export function NavMenuTrigger({
         onFocus={onActivate}
         onClick={onToggle}
       >
-        <span className="site-header__menu-trigger-label">{label}</span>
+        {label}
         <span className="site-header__menu-trigger-chevron" aria-hidden="true" />
       </button>
     </li>

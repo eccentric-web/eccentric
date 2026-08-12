@@ -45,6 +45,9 @@ export const site = {
   services: [
     "Cyber Security",
     "Infrastructure and Automation",
+    "Cloud Computing",
+    "Generative AI",
+    "Salesforce",
     "Data Backup",
     "Compliance",
     "ERP and CRM Solution",
@@ -59,10 +62,10 @@ export const site = {
   })),
   industries: [
     "E-commerce and Retail",
-    "OTT",
-    "Logistic",
-    "Banking and Finance",
-    "Healthcare",
+    "Media and Entertainment",
+    "Logistics and Supply Chain",
+    "Banking and Financial Services",
+    "Healthcare and Life Sciences",
     "Manufacturing and Supply Chain",
   ].map((label) => ({
     label,
@@ -70,9 +73,9 @@ export const site = {
   })),
   megaMenus: {
     services: {
-      title: "Services",
+      title: "End-to-end technology solutions for modern enterprises",
       description:
-        "End-to-end technology solutions engineered for scale, security, and innovation.",
+        "From cyber security and compliance to cloud computing, Salesforce, generative AI, data engineering, and ERP/CRM—we help organizations modernize legacy systems, automate operations, and adopt AI with confidence.",
       cta: {
         label: "Let's Build",
         href: "#contact",
@@ -85,16 +88,6 @@ export const site = {
             "Data Backup",
             "Compliance",
             "Biometric",
-          ].map((label) => ({
-            label,
-            href: categoryHref("services", label),
-          })),
-        },
-        {
-          title: "Infrastructure",
-          items: [
-            "Infrastructure and Automation",
-            "System Modernization",
             "Data Engineering",
           ].map((label) => ({
             label,
@@ -102,8 +95,13 @@ export const site = {
           })),
         },
         {
-          title: "Solutions",
+          title: "Infrastructure & Solutions",
           items: [
+            "Infrastructure and Automation",
+            "Cloud Computing",
+            "Generative AI",
+            "Salesforce",
+            "System Modernization",
             "ERP and CRM Solution",
             "Consulting",
             "Quality Engineering and Automation",
@@ -115,34 +113,29 @@ export const site = {
       ],
     },
     industry: {
-      title: "Industries",
+      title: "Industry expertise that powers digital transformation",
       description:
-        "Deep domain expertise across sectors driving digital transformation.",
+        "We partner with leaders across banking, healthcare, retail, media and entertainment, logistics, and manufacturing—delivering tailored solutions that improve efficiency, resilience, and customer experience at scale.",
       cta: {
         label: "Contact Us",
         href: "#contact",
       },
       columns: [
         {
-          title: "Digital",
-          items: ["E-commerce and Retail", "OTT"].map((label) => ({
+          title: "Digital & Logistics",
+          items: ["E-commerce and Retail", "Media and Entertainment", "Logistics and Supply Chain"].map((label) => ({
             label,
             href: categoryHref("industry", label),
           })),
         },
         {
           title: "Enterprise",
-          items: ["Banking and Finance", "Healthcare"].map((label) => ({
-            label,
-            href: categoryHref("industry", label),
-          })),
-        },
-        {
-          title: "Operations",
-          items: ["Logistic", "Manufacturing and Supply Chain"].map((label) => ({
-            label,
-            href: categoryHref("industry", label),
-          })),
+          items: ["Banking and Finance", "Healthcare", "Manufacturing and Supply Chain"].map(
+            (label) => ({
+              label,
+              href: categoryHref("industry", label),
+            }),
+          ),
         },
       ],
     },

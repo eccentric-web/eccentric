@@ -19,7 +19,7 @@ export function MegaMenuPanel({ menu, config, onNavigate }: MegaMenuPanelProps) 
     <div
       className={`site-header__mega site-header__mega--${menu}`}
       role="region"
-      aria-label={`${config.title} categories`}
+      aria-label={`${menu === "services" ? "Services" : "Industry"} categories`}
     >
       <div className="site-header__mega-caret" aria-hidden="true" />
 
