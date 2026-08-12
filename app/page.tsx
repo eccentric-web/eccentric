@@ -1,5 +1,5 @@
-import { MaintenanceScreen } from "@/components/maintenance-screen";
+import { LandingPage } from "@/components/landing-page";
 
 export default function Home() {
-  return <MaintenanceScreen />;
+  return <LandingPage />;
 }
