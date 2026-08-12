@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { HeroVideo } from "@/components/hero-video";
-import { getLandingVideoSrc } from "@/lib/landing-asset";
 import { site } from "@/lib/site";
 
 export function HeroSection() {
-  const videoSrc = getLandingVideoSrc();
   const sloganAnimationStart = 0.2;
   const sloganLineDelay = 0.18;
   const ctaAnimationDelay =
@@ -13,7 +11,7 @@ export function HeroSection() {
   return (
     <section className="hero" aria-labelledby="hero-slogan">
       <div className="hero__media" aria-hidden="true">
-        <HeroVideo src={videoSrc} />
+        <HeroVideo src={site.landingVideo.src} />
         <div className="hero__overlay" />
       </div>
 

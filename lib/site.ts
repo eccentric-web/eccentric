@@ -34,6 +34,9 @@ export const site = {
     width: 240,
     height: 88,
   },
+  landingVideo: {
+    src: "https://assets.eccentric.co.in/landing.mp4",
+  },
   slogan: [
     "Engineering a tech",
     "equipped future",
