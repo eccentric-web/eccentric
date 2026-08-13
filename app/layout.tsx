@@ -1,3 +1,4 @@
+import { ContactFormProvider } from "@/components/contact-form-provider";
 import { siteMetadata } from "@/lib/site";
 import "./globals.css";
 
@@ -10,7 +11,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ContactFormProvider>{children}</ContactFormProvider>
+      </body>
     </html>
   );
 }
