@@ -218,17 +218,42 @@ function ContactForm() {
 export function ContactSection() {
   const { eyebrow, title } = site.contact.form;
 
+  const renderTitle = (heading: string) => {
+    const emphasizedWord = "Customized";
+    const emphasizedSuffix = "tomized";
+    const wordIndex = heading.indexOf(emphasizedWord);
+
+    if (wordIndex === -1) {
+      return heading;
+    }
+
+    const prefix = heading.slice(0, wordIndex);
+    const wordPrefix = emphasizedWord.slice(0, emphasizedWord.length - emphasizedSuffix.length);
+    const suffix = heading.slice(wordIndex + emphasizedWord.length);
+
+    return (
+      <>
+        {prefix}
+        {wordPrefix}
+        <span className="contact-section__title-emphasis">{emphasizedSuffix}</span>
+        {suffix}
+      </>
+    );
+  };
+
   return (
-    <section id="contact" className="contact-section" aria-labelledby="contact-section-title">
+    <section id="contact" className="contact-section page-section" aria-labelledby="contact-section-title">
       <div className="contact-section__mesh" aria-hidden="true" />
       <div className="contact-section__glow contact-section__glow--left" aria-hidden="true" />
       <div className="contact-section__glow contact-section__glow--right" aria-hidden="true" />
 
       <div className="contact-section__inner">
         <header className="contact-section__header">
-          <p className="contact-section__eyebrow">{eyebrow}</p>
+          <p className="contact-section__eyebrow">
+            <span className="contact-section__eyebrow-text">{eyebrow}</span>
+          </p>
           <h2 id="contact-section-title" className="contact-section__title">
-            {title}
+            {renderTitle(title)}
           </h2>
         </header>
 

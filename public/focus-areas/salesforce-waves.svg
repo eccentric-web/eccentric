@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="316" cy="56" r="20" fill="rgba(255,255,255,0.13)"/>
+  <circle cx="70" cy="152" r="14" fill="rgba(165,243,252,0.4)"/>
+  <circle cx="128" cy="50" r="9" fill="rgba(255,255,255,0.17)"/>
+  <path d="M302 68 L346 42 M320 102 L364 78" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+  <ellipse cx="52" cy="98" rx="18" ry="10" fill="none" stroke="rgba(165,243,252,0.36)" stroke-width="1.2"/>
+  <path fill="rgba(255,255,255,0.15)" d="M0,212 C94,176 184,236 274,204 C324,186 364,222 400,200 L400,300 L0,300 Z"/>
+  <path fill="rgba(255,255,255,0.09)" d="M0,236 C112,200 222,252 400,226 L400,300 L0,300 Z"/>
+  <path fill="rgba(165,243,252,0.28)" d="M0,258 C126,232 246,268 400,244 L400,300 L0,300 Z"/>
+</svg>

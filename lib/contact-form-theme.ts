@@ -27,10 +27,11 @@ export const contactFormTheme = createTheme({
     borderRadius: 6,
   },
   typography: {
-    fontFamily: "inherit",
+    fontFamily: "var(--font-sans)",
     button: {
+      fontFamily: "var(--font-sans)",
+      fontWeight: 500,
       textTransform: "none",
-      fontWeight: 600,
     },
   },
   components: {
@@ -59,7 +60,7 @@ export const contactFormTheme = createTheme({
       styleOverrides: {
         root: {
           fontSize: "0.78rem",
-          fontWeight: 600,
+          fontWeight: 500,
           letterSpacing: "0.08em",
           textTransform: "uppercase",
           color: "#64748b",

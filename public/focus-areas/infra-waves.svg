@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="322" cy="60" r="19" fill="rgba(255,255,255,0.13)"/>
+  <circle cx="78" cy="162" r="13" fill="rgba(199,210,254,0.38)"/>
+  <path d="M298 50 L342 82 M314 96 L358 64" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="40" y="82" width="24" height="24" fill="none" stroke="rgba(199,210,254,0.34)" stroke-width="1.2"/>
+  <rect x="64" y="82" width="24" height="24" fill="none" stroke="rgba(199,210,254,0.24)" stroke-width="1.2"/>
+  <rect x="40" y="106" width="24" height="24" fill="none" stroke="rgba(199,210,254,0.24)" stroke-width="1.2"/>
+  <path fill="rgba(255,255,255,0.15)" d="M0,214 C92,178 182,238 272,206 C322,188 362,220 400,202 L400,300 L0,300 Z"/>
+  <path fill="rgba(255,255,255,0.1)" d="M0,238 C116,202 226,256 400,230 L400,300 L0,300 Z"/>
+  <path fill="rgba(199,210,254,0.28)" d="M0,260 C132,232 252,270 400,248 L400,300 L0,300 Z"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="310" cy="52" r="22" fill="rgba(255,255,255,0.14)"/>
+  <circle cx="345" cy="88" r="10" fill="rgba(186,230,253,0.45)"/>
+  <circle cx="72" cy="168" r="16" fill="rgba(255,255,255,0.1)"/>
+  <path d="M292 44 L338 78 M318 98 L356 62" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="48,92 62,84 76,92 76,108 62,116 48,108" fill="none" stroke="rgba(186,230,253,0.35)" stroke-width="1.2"/>
+  <path fill="rgba(255,255,255,0.16)" d="M0,214 C90,178 170,238 260,205 C310,186 360,220 400,200 L400,300 L0,300 Z"/>
+  <path fill="rgba(255,255,255,0.1)" d="M0,236 C110,200 210,252 320,228 C360,218 385,242 400,234 L400,300 L0,300 Z"/>
+  <path fill="rgba(186,230,253,0.28)" d="M0,258 C130,232 240,272 400,248 L400,300 L0,300 Z"/>
+</svg>

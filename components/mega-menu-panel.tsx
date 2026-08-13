@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import type { MegaMenuConfig } from "@/lib/site";
+import { SiteCtaButton } from "@/components/site-cta-button";
 
 export type MegaMenuId = "services" | "industry";
 
@@ -27,14 +28,14 @@ export function MegaMenuPanel({ menu, config, onNavigate }: MegaMenuPanelProps) 
         <aside className="site-header__mega-aside">
           <h3 className="site-header__mega-aside-title">{config.title}</h3>
           <p className="site-header__mega-aside-text">{config.description}</p>
-          <Link
+          <SiteCtaButton
             href={config.cta.href}
-            className="site-header__mega-aside-cta"
+            label={config.cta.label}
+            surface="dark"
+            size="medium"
+            className="site-header__mega-aside-cta-btn"
             onClick={onNavigate}
-          >
-            {config.cta.label}
-            <span aria-hidden="true">→</span>
-          </Link>
+          />
         </aside>
 
         <div className="site-header__mega-columns">

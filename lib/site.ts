@@ -47,6 +47,23 @@ export type FocusArea = {
   image: string;
 };
 
+export type SolutionPartner = {
+  id: string;
+  name: string;
+  icon: string;
+};
+
+export type CaseStudy = {
+  id: string;
+  businessName: string;
+  logo: string;
+  logoBackground?: string;
+  title: string;
+  description: string;
+  image: string;
+  learnMoreHref: string;
+};
+
 function categoryHref(prefix: string, label: string): string {
   const slug = label
     .toLowerCase()
@@ -107,7 +124,7 @@ export const site = {
       description:
         "From cyber security and compliance to cloud computing, Salesforce, generative AI, data engineering, and ERP/CRM—we help organizations modernize legacy systems, automate operations, and adopt AI with confidence.",
       cta: {
-        label: "Let's Build",
+        label: "Talk to us",
         href: "#contact",
       },
       columns: [
@@ -175,6 +192,9 @@ export const site = {
     title: "Technology expertise. Business outcomes.",
     description:
       "These are the niches we are building toward—and the kinds of partnerships we are actively pursuing in the market. We combine modern technology with proven delivery to solve complex challenges and create measurable value.",
+    learnMoreLabel: "Learn more",
+    learnMoreHref: "#contact",
+    autoScrollDurationMs: 42000,
     backgroundImage:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=80",
     items: [
@@ -216,7 +236,7 @@ export const site = {
           "We create modern data pipelines and platforms that ensure quality, accessibility, and governance—so your teams can focus on insights, not data wrangling.",
         accent: "data",
         image:
-          "https://images.unsplash.com/photo-1639322537508-14d0b305526a?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
       },
       {
         id: "infrastructure-data-center",
@@ -239,6 +259,101 @@ export const site = {
           "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
       },
     ] satisfies FocusArea[],
+  },
+  solutionPartners: {
+    title: "Strategic Solution Partner",
+    primaryRowCount: 8,
+    items: [
+      { id: "google-cloud", name: "Google Cloud", icon: "/partners/google-cloud.svg" },
+      { id: "azure", name: "Azure", icon: "/partners/azure.svg" },
+      { id: "docker", name: "Docker", icon: "/partners/docker.svg" },
+      { id: "aws", name: "AWS", icon: "/partners/aws.svg" },
+      { id: "kubernetes", name: "Kubernetes", icon: "/partners/kubernetes.svg" },
+      { id: "nginx", name: "NGINX", icon: "/partners/nginx.svg" },
+      { id: "cloudflare", name: "Cloudflare", icon: "/partners/cloudflare.svg" },
+      { id: "jenkins", name: "Jenkins", icon: "/partners/jenkins.svg" },
+      { id: "atlassian", name: "Atlassian", icon: "/partners/atlassian.svg" },
+      { id: "redis", name: "Redis", icon: "/partners/redis.svg" },
+      { id: "gradle", name: "Gradle", icon: "/partners/gradle.svg" },
+      { id: "apache", name: "Apache", icon: "/partners/apache.svg" },
+      { id: "aerospike", name: "Aerospike", icon: "/partners/aerospike.svg" },
+      { id: "maven", name: "Maven", icon: "/partners/maven.svg" },
+    ] satisfies SolutionPartner[],
+  },
+  caseStudies: {
+    title: "Business Case Studies",
+    learnMoreLabel: "Learn more",
+    autoAdvanceMs: 3000,
+    items: [
+      {
+        id: "tata-play",
+        businessName: "Tata Play",
+        logo: "/logos/tata-play.svg",
+        title: "Scaling a next-generation entertainment platform for millions of households.",
+        description:
+          "We helped Tata Play modernize its digital stack with resilient cloud architecture, faster content delivery, and data-driven personalization—enabling seamless viewing experiences across devices at national scale.",
+        image:
+          "https://www.atrebo.com/wp-content/uploads/2022/03/five-5-trends-in-telecom-sector-for-2022.jpg",
+        learnMoreHref: "#contact",
+      },
+      {
+        id: "kfc-uae",
+        businessName: "KFC UAE",
+        logo: "/logos/kfc-uae.jpg",
+        title: "Transforming quick-service ordering for a mobile-first market.",
+        description:
+          "We delivered a unified digital ordering experience with reliable integrations, real-time kitchen workflows, and localized customer journeys that increased conversion across the UAE footprint.",
+        image:
+          "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80",
+        learnMoreHref: "#contact",
+      },
+      {
+        id: "tabcorp",
+        businessName: "Tabcorp",
+        logo: "/logos/tabcorp.png",
+        title: "Powering secure, high-volume digital wagering experiences.",
+        description:
+          "Our team engineered performance-critical services and compliance-ready integrations that keep Tabcorp's digital channels fast, reliable, and ready for peak event traffic across regulated markets.",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvbxHZt-mkG9r2TIYpaRriI6mpZMXye11Dp4eEdCNdM0VgiXt5Ohp6ORIg&s=10",
+        learnMoreHref: "#contact",
+      },
+      {
+        id: "aramex",
+        businessName: "Aramex",
+        logo: "/logos/aramex.webp",
+        title: "Modernizing logistics visibility across a global delivery network.",
+        description:
+          "We implemented scalable tracking, routing, and operations platforms that give Aramex real-time shipment intelligence, improved SLA performance, and better customer communication at scale.",
+        image:
+          "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80",
+        learnMoreHref: "#contact",
+      },
+      {
+        id: "spotv",
+        businessName: "SPOTV",
+        logo: "/logos/spotv.svg",
+        logoBackground: "#020122",
+        title: "Delivering broadcast-grade sports streaming at global scale.",
+        description:
+          "We built low-latency streaming workflows and resilient distribution pipelines so SPOTV can deliver live sports coverage with consistent quality to audiences across regions and devices.",
+        image:
+          "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1400&q=80",
+        learnMoreHref: "#contact",
+      },
+      {
+        id: "azam-tv",
+        businessName: "Azam TV",
+        logo: "/logos/azam-tv.png",
+        logoBackground: "#1f2831",
+        title: "Expanding premium entertainment reach across emerging markets.",
+        description:
+          "We supported Azam TV with scalable streaming infrastructure, content delivery optimization, and platform engineering that helps deliver reliable viewing experiences to subscribers across Africa and beyond.",
+        image:
+          "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1400&q=80",
+        learnMoreHref: "#contact",
+      },
+    ] satisfies CaseStudy[],
   },
   nav: [
     { label: "Careers", href: "#careers" },
@@ -301,7 +416,7 @@ export const site = {
   },
   contact: {
     getInTouch: {
-      label: "Let's Build",
+      label: "Talk to us",
       href: "#contact",
     },
     getInContact: {

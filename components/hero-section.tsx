@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { HeroCta } from "@/components/hero-cta";
 import { HeroVideo } from "@/components/hero-video";
 import { site } from "@/lib/site";
 
@@ -30,13 +30,7 @@ export function HeroSection() {
           ))}
         </h1>
 
-        <Link
-          href={site.contact.getInTouch.href}
-          className="hero__cta"
-          style={{ animationDelay: `${ctaAnimationDelay}s` }}
-        >
-          {site.contact.getInTouch.label}
-        </Link>
+        <HeroCta animationDelay={ctaAnimationDelay} />
       </div>
     </section>
   );
