@@ -4,7 +4,8 @@
   "name": "eccentric",
   "compatibility_date": "2026-08-12",
   "compatibility_flags": [
-    "nodejs_compat"
+    "nodejs_compat",
+    "nodejs_compat_populate_process_env"
   ],
   "routes": [
     {

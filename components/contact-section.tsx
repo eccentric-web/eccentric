@@ -37,7 +37,9 @@ function ContactForm() {
   const [errorMessage, setErrorMessage] = useState("");
   const [turnstileToken, setTurnstileToken] = useState("");
   const [turnstileResetSignal, setTurnstileResetSignal] = useState(0);
-  const turnstileEnabled = Boolean(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY);
+  const [turnstileEnabled, setTurnstileEnabled] = useState(
+    () => Boolean(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY),
+  );
 
   const handleTurnstileVerify = useCallback((token: string) => {
     setTurnstileToken(token);
@@ -178,6 +180,7 @@ function ContactForm() {
           onVerify={handleTurnstileVerify}
           onExpire={handleTurnstileExpire}
           onError={handleTurnstileExpire}
+          onAvailabilityChange={setTurnstileEnabled}
           resetSignal={turnstileResetSignal}
         />
 

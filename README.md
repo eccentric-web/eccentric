@@ -46,16 +46,22 @@ Get keys from [Cloudflare Turnstile](https://dash.cloudflare.com/?to=/:account/t
 Production domain: **eccentric.co.in** (configured in `wrangler.jsonc`).
 
 1. Put production keys in `.env.production`.
-2. Set the Worker runtime secret:
+2. In Cloudflare dashboard → **Workers & Pages** → **eccentric** → **Settings** → **Variables and secrets**, set:
+   - `NEXT_PUBLIC_TURNSTILE_SITE_KEY` (text) — your Turnstile site key
+   - `TURNSTILE_SECRET_KEY` (secret) — your Turnstile secret key
+3. In [Turnstile](https://dash.cloudflare.com/?to=/:account/turnstile), add `eccentric.co.in` under **Hostname Management**.
+4. Set the Worker secret (if not set in dashboard):
    ```bash
    npx wrangler secret put TURNSTILE_SECRET_KEY
    ```
-3. Deploy:
+5. Deploy:
    ```bash
    npm run deploy
    ```
 
-`npm run deploy` loads `.env.production` before the build and attaches the worker to `eccentric.co.in` and `www.eccentric.co.in`.
+If you use **Workers Builds**, also add both variables under **Build variables and secrets** so `NEXT_PUBLIC_TURNSTILE_SITE_KEY` is available during the build.
+
+`npm run deploy` loads `.env.production` before the build and attaches the worker to `eccentric.co.in`.
 
 ## Production
 
